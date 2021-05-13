@@ -1,0 +1,43 @@
+[package]
+name = "lime"
+version = "0.1.0"
+authors = ["Fuwn <contact@fuwn.me>"]
+edition = "2018"
+description = "🧶 no bs url shortening"
+readme = "readme.md"
+homepage = "https://github.com/fuwn/lime"
+repository = "https://github.com/fuwn/lime"
+license = "GPL-3.0-only"
+keywords = ["rust", "lime", "shortener"]
+publish = false
+
+[dependencies]
+# Environment
+dotenv = "0.15.0"
+
+# Logging
+#log = "0.4.14"
+#pretty_env_logger = "0.4.0"
+
+# Serialization
+serde = "1.0.127"
+serde_derive = "1.0.127"
+
+# Database
+libsqlite3-sys = { version = "0.9.1", features = ["bundled"] }
+diesel = { version = "1.4.7", features = ["sqlite"] }
+
+# Web-server
+actix-web = { version = "3.3.2", features = ["rustls"] }
+actix-cors = "0.5.4"
+qstring = "0.7.2"
+
+# Error
+simple-error = "0.2.3"
+
+# Templating
+askama = "0.10.5"
+
+[build-dependencies]
+# Templating
+askama ="0.10.5"
